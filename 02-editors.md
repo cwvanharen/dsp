@@ -59,14 +59,13 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> I'm going to try to reach a reasonable level of proficiency with vim, with nano as a fallback. It seems that a lot of people eventually end up using vim so it might be worth tackling the steep learning curve sooner rather than later.
 --
 
 ###Q2. Graphical Editor
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Again I'll be tackling vim and using gedit as a graphical fallback. The primary feature of vim is the ability to navigate and edit efficiently using only the keyboard. A few of the basic shortcuts are "i" to enter insert mode, esc to enter normal mode, hjkl are used for basic left/right and up/down navigation, gg takes you to the beginning of a file, G takes you to the end, and :qw saves and quits. I haven't customized vim in any way yet, I'll wait until I'm familiar with the defaults before changing things up. 
 
  
