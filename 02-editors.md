@@ -60,7 +60,8 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 What terminal editor will you use? How did you make your decision?
 
 >> I'm going to try to reach a reasonable level of proficiency with vim, with nano as a fallback. It seems that a lot of people eventually end up using vim so it might be worth tackling the steep learning curve sooner rather than later.
---
+
+---
 
 ###Q2. Graphical Editor
 
