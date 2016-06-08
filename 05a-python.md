@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and tuples are both compound data types used to group together values. They are also both Sequence Types which means their elements can be accessed efficiently using integer indices. The big difference between them is that lists are mutable; elements in lists can be changed or deleted and elements can be added to lists. Tuples are immutable; though a tuple can contain elements that are themselves mutable, the elements in the tuple cannot be changed or deleted. Tuples can be used as keys in dictionaries, but lists can't. Because any element in a list can be changed or deleted at any time, they would function very poorly as a store for dictionary keys.
 
 ---
 
@@ -20,7 +20,30 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and sets are both compound data types used to group together values. Sets are not a Sequence Type, they are unordered. Sets also contain no duplicate elements whereas lists can. 
+
+>> ```
+>>> ex_list = [1, 3, 4, 'str', 1, 3, 'str']
+>>> ex_list[0:3]
+[1, 3, 4]
+>>> ex_set = set(ex_list)
+>>> ex_set
+set([1, 3, 4, 'str'])
+>>> ex_set[0:3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'set' object does not support indexing
+```
+Sets also support mathematical operations like unions, intersections and tests for subset, superset and disjointedness. 
+```
+>>> set1 = set([3, 4, 5])
+>>> set2 = {5, 6, 7}
+>>> set1 & set2
+set([5])
+>>> set1 < set2
+False
+```
+Finding an element in a set is more efficient than a list, but I'm still trying to figure out why...
 
 ---
 
