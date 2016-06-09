@@ -86,6 +86,11 @@ Or we could accomplish the same thing in a simpler way with list comprehension:
 ```
 y = [x for x in t if x%2 == 0]
 ```
+List comprehensions can be used for more complex or specific operations than `map` and `filter`. `map` and `filter` provide a more straighforward, easily readable, way to accomplish simple operations on lists. It seems that in most cases you could use either approach, but that the one suited to the task will be shorter and simpler. 
+
+>> Set and dictionary comprehensions are similar to list comprehensions, but return sets or dictionaries. 
+
+>> An example of a list comprehension
 
 
 ---
@@ -101,7 +106,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
 
 b.  
 ```
@@ -109,7 +114,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> About 81 days(81.4)
 
 c.  
 ```
@@ -117,7 +122,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7,850 days   
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
