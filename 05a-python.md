@@ -114,7 +114,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> About 81 days(81.4)
+>> 513 days
 
 c.  
 ```
