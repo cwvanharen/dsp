@@ -51,7 +51,18 @@ Finding an element in a set is more efficient than a list, but I'm still trying 
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Python's lambda is a way to make anonymous functions (functions without names). It's used to create one-off functions, often within a higher-order function like `map()`, `filter()`, `reduce()` or `sort()`.
+
+>> For example:
+```
+t = [1, -1, 56, -20, -5, 8]
+s = sorted(t, key=lambda x: x**2)
+```
+Creates a new list 's' sorted by the value of the squares of the elements in 't'. Another example:
+```
+v = map(lambda x: x%2, t)
+```
+Creates a list 'v' where an even number in 't' returns a 0 and an odd number returns a 1.
 
 ---
 
@@ -59,7 +70,23 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are a way to perform an operation on each element of a list and return a new list. They can be used for this purpose in place of `for` loops or in place of built-in functions like `map` and `filter`. 
+
+>> For example, using set 't' above, we can use list comprehension to create a list equivalent to 'v'.
+```
+u = [x%2 for x in t]
+```
+We could use `filter` to keep only the even numbers in 't':
+```
+def even(x):
+    return x%2 == 0
+w = filter(even, t)
+```
+Or we could accomplish the same thing in a simpler way with list comprehension:
+```
+y = [x for x in t if x%2 == 0]
+```
+
 
 ---
 
