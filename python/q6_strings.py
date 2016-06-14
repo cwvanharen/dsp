@@ -7,18 +7,14 @@ def donuts(count):
     Given an int count of a number of donuts, return a string of the
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count.
-
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
+    'many' instead of the actual count
     """
-    raise NotImplementedError
+    
+    if count >= 10:
+        x = 'many'
+    else:
+        x = count
+    return 'Number of donuts: {}'.format(x)
 
 
 def both_ends(s):
@@ -37,8 +33,12 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
-
+    if len(s) < 2:
+        x = ''
+    else:
+        x = s[:2] + s[-2:]
+    return x
+    
 
 def fix_start(s):
     """
@@ -56,7 +56,19 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    
+    # version 2... with replace!
+    return s[0] + s[1:].replace(s[0], '*')
+   
+    
+    # version 1
+    '''
+    matches = [i for i, j in enumerate(s) if j == s[0]]
+    ls = list(s)
+    for x in matches[1:]:
+        ls[x] = '*'
+    return ''.join(ls)
+    '''
 
 
 def mix_up(a, b):
@@ -74,7 +86,8 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
+    
 
 
 def verbing(s):
@@ -91,7 +104,12 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 4:
+        return s
+    elif s[-3:] == 'ing':
+        return s + 'ly'
+    else:
+        return s + 'ing'
 
 
 def not_bad(s):
@@ -111,7 +129,11 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    a = s.find('not')
+    b = s.find('bad')
+    if a != -1 and a < b:
+        return s.replace(s[a:b+3], 'good')
+    return s
 
 
 def front_back(a, b):
@@ -130,4 +152,12 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    
+    front_a = a[:(len(a)/2 + len(a) % 2)]
+    back_a = a[-(len(a)/2):]
+    front_b = b[:(len(b)/2 + len(b) % 2)]
+    back_b = b[-(len(b)/2):]
+    
+    return front_a + front_b + back_a + back_b
+    
+    
