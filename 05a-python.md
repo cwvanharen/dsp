@@ -43,7 +43,7 @@ set([5])
 >>> set1 < set2
 False
 ```
-Finding an element in a set is more efficient than a list, but I'm still trying to figure out why...
+Finding an element in a set is more efficient than a list because sets are hashable.
 
 ---
 
@@ -88,10 +88,15 @@ y = [x for x in t if x%2 == 0]
 ```
 List comprehensions can be used for more complex or specific operations than `map` and `filter`. `map` and `filter` provide a more straighforward, easily readable, way to accomplish simple operations on lists. It seems that in most cases you could use either approach, but that the one suited to the task will be shorter and simpler. 
 
->> Set and dictionary comprehensions are similar to list comprehensions, but return sets or dictionaries. 
+>> Set and dictionary comprehensions are similar to list comprehensions, but return sets or dictionaries.
 
->> An example of a list comprehension
-
+>> A set comprehension:
+```
+set = {x*3 for x in range(1,10)}
+```
+A dictionary comprehension:
+```
+d = {x: x**10 for x in range(1,10) if x % 2 != 0}
 
 ---
 
