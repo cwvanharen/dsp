@@ -13,7 +13,7 @@ def read_data(filename):
     return lists
 
 def get_elem(lists, index):
-    """Return a list of all the different elements at position 'index'"""
+    """Return a list of all the elements at position 'index'"""
     elements = []
     for x in lists[1:]:
         elements.append(x[index])

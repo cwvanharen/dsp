@@ -13,6 +13,7 @@ def read_data(data):
         for thing in football:
             fbdict[thing[0]] = thing[1:] 
     del fbdict['Team']
+    
     return fbdict   
 
 def get_min_score_difference(parsed_data):
@@ -21,8 +22,8 @@ def get_min_score_difference(parsed_data):
     dif = []
     for team, values in parsed_data.iteritems():
         dif.append((team, abs(int(values[4]) - int(values[5]))))
-    
     minimum = min(dif, key=lambda dif: dif[1])
+    
     return minimum[0]
  
     
