@@ -1,4 +1,4 @@
-# Hint:  use Google to find python function
+
 from datetime import datetime
 
 ####a) 
