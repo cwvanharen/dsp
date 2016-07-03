@@ -18,8 +18,6 @@ for x, p in actual_pmf.Items():
 
 biased_pmf.Normalize()
 
-#thinkplot.Pmf(actual_pmf, label='Actual Kid Pmf')
-#thinkplot.Show()
 thinkplot.PrePlot(2)
 thinkplot.Pmfs([actual_pmf, biased_pmf])
 thinkplot.Show()
